@@ -1,4 +1,5 @@
 {
+  "version": "0.1.6",
   "name": "dimanzver/sdek-sdk",
   "type": "library",
   "description": "PHP SDK для API v2.0 от сервиса интеграции компании СДЭК",
