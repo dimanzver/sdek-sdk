@@ -1,5 +1,5 @@
 {
-  "name": "cdek-it/sdk2.0",
+  "name": "dimanzver/sdek-sdk",
   "type": "library",
   "description": "PHP SDK для API v2.0 от сервиса интеграции компании СДЭК",
   "keywords": [
@@ -22,7 +22,7 @@
   "require": {
     "php": "^7.1",
     "ext-json": "*",
-    "jms/serializer": "^1.14.0",
+    "jms/serializer": "^3.0.0",
     "nyholm/psr7": "^1.2",
     "psr/http-client": "^1.0",
     "rakit/validation": "^1.1"
