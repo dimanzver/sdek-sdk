@@ -174,4 +174,11 @@ class PickupPoint
      * @var Phone[]
      */
     public $phones = [];
+
+    /**
+     * Наличие зоны фулфилмента
+     * @Type("bool")
+     * @var bool
+     */
+    public $fulfillment;
 }
