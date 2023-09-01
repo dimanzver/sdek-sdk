@@ -1,5 +1,5 @@
 {
-  "version": "0.1.7",
+  "version": "0.1.8",
   "name": "dimanzver/sdek-sdk",
   "type": "library",
   "description": "PHP SDK для API v2.0 от сервиса интеграции компании СДЭК",
@@ -21,7 +21,7 @@
     }
   ],
   "require": {
-    "php": "^7.1",
+    "php": "^7.1 || ^8.0",
     "ext-json": "*",
     "jms/serializer": "^3.0.0",
     "nyholm/psr7": "^1.2",
@@ -35,13 +35,16 @@
     "php-http/mock-client": "^1.3",
     "phpmd/phpmd": "^2.7",
     "phpstan/phpstan": ">=0.10",
-    "phpunit/phpunit": "^6.5 || ^7.4",
+    "phpunit/phpunit": "^6.5 || ^7.4 || ^8.5",
     "squizlabs/php_codesniffer": "*",
     "symfony/http-client": "^4.3",
     "vimeo/psalm": ">=3.0.16"
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "php-http/discovery": false
+    }
   },
   "extra": {
     "branch-alias": {
