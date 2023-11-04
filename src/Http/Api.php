@@ -154,6 +154,11 @@ class Api
             $this->expire = time() + $this->expire - 10;
             return true;
         }
+
+        if ($response->getStatus() >= 500)
+            throw new AuthException("CDEK error with status code: " . $response->getStatus() .
+                "\nResponse: " . $response->getBody());
+
         throw new AuthException(Constants::AUTH_FAIL);
     }
 
