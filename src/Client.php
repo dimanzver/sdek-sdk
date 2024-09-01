@@ -312,7 +312,11 @@ class Client
             $result->entity = null;
 
             $array_response = json_decode($response->getBody(), true);
-            $entity = $this->serializer->deserialize(json_encode($array_response['entity']), $className, 'json');
+            $entity = $this->serializer->deserialize(
+                json_encode($array_response['entity'] ?? null),
+                $className,
+                'json'
+            );
             $result->entity = $entity;
 
             return $result;
