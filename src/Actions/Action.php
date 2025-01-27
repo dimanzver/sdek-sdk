@@ -66,6 +66,17 @@ class Action
     }
 
     /**
+     * Отправка запрос на изменение элемента
+     * @param array $params
+     * @return ApiResponse
+     * @throws RequestException
+     */
+    protected function preparedPatch(array $params = []): ApiResponse
+    {
+        return $this->http_client->patch($this->slug(), $params);
+    }
+
+    /**
      * Форматирование url для запросов
      * @param string|null $uuid
      * @return string

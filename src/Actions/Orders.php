@@ -30,4 +30,16 @@ class Orders extends ActionsWithDelete
         $params = $this->serializer->toArray($order);
         return $this->preparedAdd($params);
     }
+
+    /**
+     * Обновление заказа
+     * @param Order $order
+     * @return ApiResponse
+     * @throws \CdekSDK2\Exceptions\RequestException
+     */
+    public function update(Order $order): ApiResponse
+    {
+        $params = $this->serializer->toArray($order);
+        return $this->preparedPatch($params);
+    }
 }
